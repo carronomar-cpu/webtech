@@ -1,0 +1,18 @@
+/* stijl.css - labo 5, fotolijst (reset.css is linked before this file) */
+
+/* === tokens === */
+:root {
+--achtergrond: #111111;
+    --tekst: #f3efe6;
+    --groen: #4e9a52;
+    --roze: #f2a7d6;
+    --lime: #b4f52d;
+    --rood: #ea4d3d;
+}
+
+/* === your rules === */
+body {
+background-color: var(--achtergrond);
+color: var(--tekst);
+
+}
