@@ -1,12 +1,12 @@
 # Labo 2 - reflecties
 
 Naam: (jouw naam)
-
+Omar Carron
 ## 2. Selectors lezen
 
 Welke elementen raakt elke selector? Eén zin per selector.
 
-- a. `header nav ul li a`: 
+- a. `header nav ul li a`: enkel de links van de header.
 - b. `article > p`: 
 - c. `.uren li:nth-child(3)`: 
 - d. `h2 ~ p`: 
