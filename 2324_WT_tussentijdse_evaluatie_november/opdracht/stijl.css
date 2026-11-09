@@ -18,3 +18,29 @@ Verder: black (zwart) en #f5f5f5 (grijs)
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;}
+
+header h3 span {
+    display: block;
+    height: 0.125rem;
+    width: 1.5rem;
+    background-color: black;
+    margin-bottom: 0.25rem;
+    
+}
+
+header {
+    display: flex;
+    border-bottom: 1px solid black;
+   padding: 2rem;
+}
+nav {
+    display: none;
+}
+
+ header h1 {
+    flex: 1;
+    text-align: center;
+}
+article {
+    padding: 1rem;
+}
