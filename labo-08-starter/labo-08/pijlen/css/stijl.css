@@ -2,7 +2,44 @@
 
 /* === tokens: colours, the three shapes, one duration and one curve === */
 :root {
+--papier: hsl(47 20% 92%);
+--oranje: hsl(28 78% 58%);
+--groen: hsl(113 62% 64%);
+--blauw: hsl(190 60% 65%);
 
+--pijl-rechts: polygon(0 0, 60% 0, 100% 50%, 60% 100%, 100% 100%, 0 100%, 40% 50%);
+--vierkant: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
+--pijl-links: polygon(40% 0, 100% 0, 60% 50%, 100% 100%, 40% 100%, 0 50%);
+
+--duur: 6s;
+--curve: ease-in-out;
+}
+@keyframes vormen {
+    0%, 100% {clip-path: var(--pijl-rechts); background-color: var(--oranje);}
+    33% {clip-path: var(--vierkant); background-color: var(--groen);}
+    66% {clip-path: var(--pijl-links); background-color: var(--blauw);}
+}
+body {
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rooster {
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    background-color: var(--papier);
+    gap :3rem;
+}
+.tegel {
+    background-color: var(--oranje);
+    height: 8rem;
+    animation-name: vormen;
+    animation-duration: var(--duur);
+    animation-iteration-count: infinite;
+}
+.tegel:nth-child(even) {
+    animation-delay: calc(var(--duur) / -3);
 }
 
 /* === the grid in the middle of the window (4.7) === */

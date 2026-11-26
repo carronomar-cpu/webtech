@@ -2,11 +2,54 @@
 
 /* === tokens: colours, one duration, one curve and the time between two runners === */
 :root {
+--wit: hsl(0 0% 100%);
+--een: hsl(165 34% 47%);
+--twee: hsl(152 36% 57%);
+--drie: hsl(187 44% 62%);
+--vier: hsl(192 45% 77%);
 
+--duur: 2s;
+--curve: ease-in-out;
+--wissel: 250ms; 
 }
 
 /* === four lanes that fill the window === */
-
+.baan {
+    background-color: var(--wit);
+    height: 100svh;
+}
+.loper {
+    width: 25svh;
+    height: 25svh;
+    animation: loper;
+    animation-duration: var(--duur);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.loper:nth-child(1) {
+    background-color: var(--een);
+    
+}
+.loper:nth-child(2) {
+    background-color: var(--twee);
+    animation-delay: var(--wissel);
+}
+.loper:nth-child(3) {
+    background-color: var(--drie);
+    animation-delay: calc(250ms * 2);
+}
+.loper:nth-child(4) {
+    background-color: var(--vier);
+    animation-delay: calc(250ms * 3);
+}
+@keyframes loper{
+    0% {
+        transform: translate(0.0);
+    }
+    100% {
+        transform: translate(calc(100vw - 25svh), 0);
+    }
+}
 /* === the runners: one animation, there and back; each one starts a little later (8.4) === */
 
 /* === keyframes: only the way there === */
