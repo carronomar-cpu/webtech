@@ -1,0 +1,37 @@
+:root {
+  --duur: 600ms;
+  --curve: ease-out;
+}
+
+body {
+  padding: 2rem;
+  font-family: helvetica;
+}
+
+.knop {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: crimson;
+  color: white;
+  transition: transform var(--duur) var(--curve);
+}
+
+.knop:hover {
+  transform: translateX(0);
+}
+
+.knop:active {
+  transform: scale(3);
+}
+
+.knop:focus-visible {
+  outline: .2rem solid crimson;
+  outline-offset: .4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knop {
+    transition: none;
+  }
+}

@@ -1,0 +1,30 @@
+.rij {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.balk {
+  width: 100px;
+  height: 40px;
+  background: #4338ca;
+}
+
+.met-width {
+  transition: width 600ms;
+}
+
+.met-transform {
+  transform-origin: left;
+  transition: transform 600ms;
+}
+
+.rij:hover .met-width {
+  width: 200px;
+}
+
+.rij:hover .met-transform {
+  transform: scaleX(2);
+}

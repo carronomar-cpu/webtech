@@ -1,0 +1,40 @@
+.kader {
+  width: fit-content;
+  margin: 3rem;
+  border: 2px dashed #aaa;
+}
+
+.kaart {
+  display: block;
+  padding: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #4338ca;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+
+  transform-origin: top left;
+  transform: rotate(-3deg);
+  transition: transform 200ms ease-out;
+}
+
+.kaart:hover,
+.kaart:focus-visible {
+  transform: translateY(-8px) rotate(-3deg) scale(1.05);
+}
+
+.kaart:active {
+  transform: rotate(-3deg) scale(0.97);
+}
+
+.kaart:focus-visible {
+  outline: 3px solid #4338ca;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kaart {
+    transition: none;
+  }
+}

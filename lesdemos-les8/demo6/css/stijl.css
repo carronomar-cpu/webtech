@@ -1,0 +1,35 @@
+h2 {
+    margin-bottom: 1rem;
+}
+
+.kaart {
+  max-width: 320px;
+  padding: 2rem 2rem 3rem;
+  color: white;
+  font-family: system-ui, sans-serif;
+
+  /* Een kleurverloop van links naar rechts */
+  background-image: linear-gradient(
+    to right,
+    #4338ca,
+    #701a75
+  );
+
+  /* Knip de onderrand schuin af */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 85%,
+    0 100%
+  );
+}
+
+/* Een decoratief streepje na de titel */
+.kaart h2::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 4px;
+  margin-top: 1rem;
+  background-color: white;
+}

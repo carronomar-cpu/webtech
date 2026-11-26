@@ -1,0 +1,23 @@
+.kaart {
+  display: inline-block;
+  margin: 2rem 1rem;
+  padding: 2rem;
+  background: #4338ca;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+/* Alleen tijdens hover: de terugweg heeft geen transition. */
+.abrupt:hover {
+  transform: translateY(-10px);
+  transition: transform 400ms ease-out;
+}
+
+/* Altijd aanwezig: de transition werkt heen én terug. */
+.vloeiend {
+  transition: transform 400ms ease-out;
+}
+
+.vloeiend:hover {
+  transform: translateY(-10px);
+}

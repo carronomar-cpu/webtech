@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Titel van je pagina</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/stijl.css">
+</head>
+<body>
+    <button type="button"
+        onclick="document.querySelector('#info').showModal()">
+      Bekijk de bezoekuren
+    </button>
+
+    <dialog id="info" aria-labelledby="titel">
+      <h2 id="titel">Bezoekuren</h2>
+      <p>Elke dag van 14 tot 17 uur.</p>
+
+      <form method="dialog">
+        <button>Sluiten</button>
+      </form>
+    </dialog>
+</body>
+</html>
