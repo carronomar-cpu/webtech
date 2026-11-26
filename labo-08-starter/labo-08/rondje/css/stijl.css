@@ -2,11 +2,52 @@
 
 /* === tokens: colours, one duration and one curve (8.1) === */
 :root {
+    --papier: hsl(47 20% 92%);
+    --geel: hsl(50 88% 61%);
+    --oranje: hsl(27 67% 48%);
+    --rood: hsl(8 72% 35%);
+    --bordeaux: hsl(2 80% 25%);
 
+    --duur: 8s;
+    --curve: ease-in-out;
 }
 
-/* === the stage fills the window === */
 
+/* === the stage fills the window === */
+.piste {
+    background-color: var(--papier);
+    height: 100svh;
+}
+
+.blok {
+    background-color: var(--geel);
+    height: 50svh;
+    width: 50vw;
+    animation-name: rondje;
+    animation-duration: var(--duur);
+    animation-iteration-count: infinite;
+    animation-timing-function: var(--curve);
+    animation-direction: alternate;
+}
+
+@keyframes rondje {
+    0%, 100% {
+        transform: translate(0, 0);
+        background-color: var(--geel);
+    }
+    25% {
+         transform: translate(50vw, 0);
+        background-color: var(--oranje);
+    }
+    50% {
+         transform: translate(50vw, 50svh);
+        background-color: var(--rood);
+    }
+    75% {
+         transform: translate(0, 50svh);
+        background-color: var(--bordeaux);
+    }
+}
 /* === the box and its animation (8.4) === */
 
 /* === keyframes: four stops, a place and a colour each === */
